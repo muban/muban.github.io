@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: MuNote
 subtitle:
-description:
-author: John Doe
-language:
+description: 大半夜的还不睡觉，你怕是要修仙！
+author: 慕绊
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: mubanfive.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -63,9 +63,20 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+ type: git
+ repo: https://github.com/muban/muban.github.io.git
+ branch: master
+ message: 'Daily updated：{{now("YYYY-MM-DD HH:mm:ss")}} by muban'
+ 
+#search
+algolia:
+ applicationID: 9GC3R3JYIG
+ apiKey: 2fd1e9703b0fd4fd0198c77a7ef217be
+ adminApiKey: 5311919dc1ed44478088a07e11475edd
+ indexName: tag
+ chunkSize: 5000
