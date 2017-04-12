@@ -320,6 +320,387 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="mubanfive.com/2017/04/12/jsNote003/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="慕绊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MuNote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/12/jsNote003/" itemprop="url">
+                  JsNote_3_数据类型
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T10:05:18+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据类型/" itemprop="url" rel="index">
+                    <span itemprop="name">数据类型</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据类型/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据类型/Note/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/12/jsNote003/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/12/jsNote003/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/12/jsNote003/" class="leancloud_visitors" data-flag-title="JsNote_3_数据类型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><font size="18" color="#FF0000">数据类型</font><br>JavaScript 是一种动态类型语言，变量没有类型限制，可以随时赋予任意值。<br>原始类型值的转换规则<br>原始类型的值主要是字符串、布尔值、undefined和null，它们都能被Number转成数值或NaN。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 数值：转换后还是原来的值</span></div><div class="line"><span class="built_in">Number</span>(<span class="number">324</span>) <span class="comment">// 324</span></div><div class="line"></div><div class="line"><span class="comment">// 字符串：如果可以被解析为数值，则转换为相应的数值</span></div><div class="line"><span class="built_in">Number</span>(<span class="string">'324'</span>) <span class="comment">// 324</span></div><div class="line"></div><div class="line"><span class="comment">// 字符串：如果不可以被解析为数值，返回NaN</span></div><div class="line"><span class="built_in">Number</span>(<span class="string">'324abc'</span>) <span class="comment">// NaN</span></div><div class="line"></div><div class="line"><span class="comment">// 空字符串转为0</span></div><div class="line"><span class="built_in">Number</span>(<span class="string">''</span>) <span class="comment">// 0</span></div><div class="line"></div><div class="line"><span class="comment">// 布尔值：true 转成1，false 转成0</span></div><div class="line"><span class="built_in">Number</span>(<span class="literal">true</span>) <span class="comment">// 1</span></div><div class="line"><span class="built_in">Number</span>(<span class="literal">false</span>) <span class="comment">// 0</span></div><div class="line"></div><div class="line"><span class="comment">// undefined：转成 NaN</span></div><div class="line"><span class="built_in">Number</span>(<span class="literal">undefined</span>) <span class="comment">// NaN</span></div><div class="line"></div><div class="line"><span class="comment">// null：转成0</span></div><div class="line"><span class="built_in">Number</span>(<span class="literal">null</span>) <span class="comment">// 0</span></div></pre></td></tr></table></figure></p>
+<p>对象的转换规则<br>简单的规则是，Number方法的参数是对象时，将返回NaN，除非是包含单个数值的数值。</p>
+<p>Number背后的转换规则<br>1、调用对象自身的valueOf方法。如果返回原始类型的值，则直接对该值使用Number函数，不再进行后续步骤。<br>2、如果valueOf方法返回的还是对象，则改为调用对象自身的toString方法。如果toString方法返回原始类型的值，则对该值使用Number函数，不再进行后续步骤。<br>3、如果toString方法返回的是对象，就报错。</p>
+<p>String<br>使用String函数，可以将任意类型的值转化成字符串。转换规则如下。</p>
+<p>1.原始类型值的转换规则<br>数值：转为相应的字符串。<br>字符串：转换后还是原来的值。<br>布尔值：true转为”true”，false转为”false”。<br>undefined：转为”undefined”。<br>null：转为”null”。</p>
+<p>2.对象的转换规则<br>String方法的参数如果是对象，返回一个类型字符串；如果是数组，返回该数组的字符串形式。<br>String方法背后的转换规则，与Number方法基本相同，只是互换了valueOf方法和toString方法的执行顺序<br>1、先调用对象自身的toString方法。如果返回原始类型的值，则对该值使用String函数，不再进行以下步骤。<br>2、如果toString方法返回的是对象，再调用原对象的valueOf方法。如果valueOf方法返回原始类型的值，则对该值使用String函数，不再进行以下步骤。<br>3、如果valueOf方法返回的是对象，就报错。</p>
+<p>Boolean<br>除了以下六个值的转换结果为false，其他的值全部为true。<br>undefined<br>null<br>-0<br>0或+0<br>NaN<br>‘’（空字符串）<br>所有对象的布尔值都是true，这是因为JavaScript语言设计的时候，出于性能的考虑，如果对象需要计算才能得到布尔值，对于obj1 &amp;&amp; obj2这样的场景，可能会需要较多的计算。为了保证性能，就统一规定，对象的布尔值为true。</p>
+<p>自动转换<br>自动转换的规则是这样的：预期什么类型的值，就调用该类型的转换函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1. 不同类型的数据互相运算</span></div><div class="line"><span class="number">123</span> + <span class="string">'abc'</span> <span class="comment">// "123abc"</span></div><div class="line"></div><div class="line"><span class="comment">// 2. 对非布尔值类型的数据求布尔值</span></div><div class="line"><span class="keyword">if</span> (<span class="string">'abc'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'hello'</span>)</div><div class="line">&#125;  <span class="comment">// "hello"</span></div><div class="line"></div><div class="line"><span class="comment">// 3. 对非数值类型的数据使用一元运算符（即“+”和“-”）</span></div><div class="line">+ &#123;<span class="attr">foo</span>: <span class="string">'bar'</span>&#125; <span class="comment">// NaN</span></div><div class="line">- [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] <span class="comment">// NaN</span></div></pre></td></tr></table></figure></p>
+<p><b>参考学习文章</b><a href="http://javascript.ruanyifeng.com/grammar/conversion.html" target="_blank">《JavaScript 标准参考教程（alpha）》</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="mubanfive.com/2017/04/12/jsNote002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="慕绊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MuNote">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/12/jsNote002/" itemprop="url">
+                  JsNote_2_基本语法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T09:13:48+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/语法/" itemprop="url" rel="index">
+                    <span itemprop="name">语法</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/语法/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">Note</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/语法/Note/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/12/jsNote002/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/12/jsNote002/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/12/jsNote002/" class="leancloud_visitors" data-flag-title="JsNote_2_基本语法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><font size="18" color="#FF0000">基本语法</font><br>语句<br>JavaScript程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。<br>语句（statement）是为了完成某种任务而进行的操作<br>变量<br>变量是对“值”的引用，使用变量等同于引用一个值。每一个变量都有一个变量名。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<p>变量的声明和赋值，是分开的两个步骤，上面的代码将它们合在了一起，实际的步骤是下面这样。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a;</div><div class="line">a = <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<p>如果只是声明变量而没有赋值，则该变量的值是<font color="#FF0000">undefined</font>。<font color="#FF0000">undefined</font>是一个JavaScript关键字，表示“无定义”。</p>
+<p><font color="#FF0000">JavaScirpt是一种动态类型语言，也就是说，变量的类型没有限制，可以赋予各种类型的值。</font><br>变量提升<br>引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升（hoisting）。<br>变量提升只对var命令声明的变量有效<br>标识符<br>标识符（identifier）是用来识别具体对象的一个名称。最常见的标识符就是变量名，以及后面要提到的函数名。JavaScript语言的标识符对大小写敏感<br>标识符命名规则:<br>第一个字符，可以是任意Unicode字母（包括英文字母和其他语言的字母），以及美元符号（$）和下划线（_）。<br>第二个字符及后面的字符，除了Unicode字母、美元符号和下划线，还可以用数字0-9。</p>
+<p>JavaScript有一些保留字，不能用作标识符：arguments、break、case、catch、class、const、continue、debugger、default、delete、do、else、enum、eval、export、extends、false、finally、for、function、if、implements、import、in、instanceof、interface、let、new、null、package、private、protected、public、return、static、super、switch、this、throw、true、try、typeof、var、void、while、with、yield。<br>另外，还有三个词虽然不是保留字，但是因为具有特别含义，也不应该用作标识符：Infinity、NaN、undefined。</p>
+<p>区块<br>JavaScript使用大括号，将多个相关的语句组合在一起，称为“区块”（block）。<br>与大多数编程语言不一样，JavaScript的区块不构成单独的作用域（scope）。也就是说，区块中的变量与区块外的变量，属于同一个作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">a <span class="comment">// 1</span></div></pre></td></tr></table></figure></p>
+<p>条件语句<br>条件语句提供一种语法构造，只有满足某个条件，才会执行相应的语句。JavaScript提供if结构和switch结构，完成条件判断。<br>循环语句<br>循环语句用于重复执行某个操作，它有多种形式,while,for循环</p>
+<p><b>参考学习文章</b><a href="http://javascript.ruanyifeng.com/grammar/basic.html" target="_blank">《JavaScript 标准参考教程（alpha）》</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="mubanfive.com/2017/04/11/jsNote001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -467,7 +848,8 @@
 <p><font color="#FF0000">length</font>属性可写，如果设置<font color="#FF0000">length</font>小于最大数量，则自动删除设置属性数值后的数据，同理，清空数组，则设置<font color="#FF0000">length</font>为0，如果人为设置<font color="#FF0000">length</font>大于当前元素个数，则数组的成员数量会增加到这个值，新增的位置都是空位。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 设置负值</span></div><div class="line">[].length = <span class="number">-1</span></div><div class="line"><span class="comment">// RangeError: Invalid array length</span></div><div class="line"></div><div class="line"><span class="comment">// 数组元素个数大于等于2的32次方</span></div><div class="line">[].length = <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">32</span>)</div><div class="line"><span class="comment">// RangeError: Invalid array length</span></div><div class="line"></div><div class="line"><span class="comment">// 设置字符串</span></div><div class="line">[].length = <span class="string">'abc'</span></div><div class="line"><span class="comment">// RangeError: Invalid array length</span></div></pre></td></tr></table></figure></p>
 <p>如果人为设置<font color="#FF0000">length</font>为不合法的值，JavaScript会报错。<br>由于数值本质是对象，所以可以添加属性，但不影响length的大小,以下代码不影响<font color="#FF0000">length</font>属性，因为，<font color="#FF0000">length</font>属性的值就是等于最大的数字键加1，而这个数组没有整数键，所以<font color="#FF0000">length</font>属性保持为0。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [];</div><div class="line"></div><div class="line">a[<span class="string">'p'</span>] = <span class="string">'abc'</span>;</div><div class="line">a.length <span class="comment">// 0</span></div><div class="line"></div><div class="line">a[<span class="number">2.1</span>] = <span class="string">'abc'</span>;</div><div class="line">a.length <span class="comment">// 0</span></div></pre></td></tr></table></figure></p>
 <p>如果数组的键名是添加超出范围的数值，该键名会自动转为字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [];</div><div class="line">arr[<span class="number">-1</span>] = <span class="string">'a'</span>;</div><div class="line">arr[<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">32</span>)] = <span class="string">'b'</span>;</div><div class="line"></div><div class="line">arr.length <span class="comment">// 0</span></div><div class="line">arr[<span class="number">-1</span>] <span class="comment">// "a"</span></div><div class="line">arr[<span class="number">4294967296</span>] <span class="comment">// "b"</span></div></pre></td></tr></table></figure></p>
-<p>以上代码相当于添加了两个新的字符串属性，所以<font color="#FF0000">length</font>大小无变化，却可以通过转化后的字符串取值</p>
+<p>以上代码相当于添加了两个新的字符串属性，所以<font color="#FF0000">length</font>大小无变化，却可以通过转化后的字符串取值<br>in运算符<br>检查某个键名是否存在的运算符<font color="#FF0000">in</font>，适用于对象，也适用于数组。<br>for…in</p>
+<p><font color="#FF0000">for…in</font>循环不仅可以遍历对象，也可以遍历数组，且，<font color="#FF0000">for…in</font>不仅会遍历数组所有的数字键，还会遍历非数字键。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">a.foo = <span class="literal">true</span>;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> a) &#123;</div><div class="line">  <span class="built_in">console</span>.log(key);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 0</span></div><div class="line"><span class="comment">// 1</span></div><div class="line"><span class="comment">// 2</span></div><div class="line"><span class="comment">// foo</span></div></pre></td></tr></table></figure></p>
 <p><b>参考学习文章</b><a href="http://javascript.ruanyifeng.com/grammar/array.html" target="_blank">《JavaScript 标准参考教程（alpha）》</a></p>
 
           
@@ -717,7 +1099,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -726,7 +1108,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
